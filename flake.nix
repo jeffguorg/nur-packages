@@ -18,7 +18,12 @@
     in
     {
       legacyPackages = forAllSystems (system: import ./default.nix {
-        pkgs = import nixpkgs { inherit system; };
+        pkgs = import nixpkgs {
+          inherit system;
+          overlays = [
+            gomod2nix.overlays.default
+          ];
+        };
       });
       packages = forAllSystems (system: nixpkgs.lib.filterAttrs (_: v: nixpkgs.lib.isDerivation v) self.legacyPackages.${system});
     };
