@@ -3,3 +3,7 @@ src.github_tag = "tauri-apps/create-tauri-app"
 src.include_regex = "create-tauri-app-v\\d+\\.\\d+\\.\\d+"
 fetch.github = "tauri-apps/create-tauri-app"
 extract = ["Cargo.lock"]
+
+[kwok]
+src.github = "kubernetes-sigs/kwok"
+fetch.github = "kubernetes-sigs/kwok"

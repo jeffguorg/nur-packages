@@ -5,7 +5,6 @@
 # Having pkgs default to <nixpkgs> is fine though, and it lets you use short
 # commands such as:
 #     nix-build -A mypackage
-
 { pkgs ? import <nixpkgs> { } }: let
   sources = pkgs.callPackage ./_sources/generated.nix {};
 in {
@@ -15,6 +14,10 @@ in {
   overlays = import ./overlays; # nixpkgs overlays
 
   cargo-create-tauri-app = pkgs.callPackage ./pkgs/cargo-create-tauri-app {
+    inherit sources;
+  };
+
+  kwok = pkgs.callPackage ./pkgs/kwok/default.nix {
     inherit sources;
   };
 }
