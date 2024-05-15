@@ -23,6 +23,7 @@ jobs:
           access-tokens = github.com=${{ secrets.GITHUB_TOKEN }}
     - name: Update Sources
       run: |
+        rm _sources -rfv
         nix run nixpkgs#nvfetcher
     - name: Update nix flake lock
       run: nix flake update
