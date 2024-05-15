@@ -9,6 +9,10 @@ on:
 jobs:
   auto-update:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        nixPath:
+          - nixpkgs=channel:nixos-unstable-small
     # env:
     #   GIT_SSL_NO_VERIFY: 'true'
     steps:
