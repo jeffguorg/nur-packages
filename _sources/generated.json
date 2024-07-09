@@ -35,10 +35,10 @@
             "name": null,
             "owner": "kubernetes-sigs",
             "repo": "kwok",
-            "rev": "v0.5.2",
-            "sha256": "sha256-1AeMpDyLGvON1mRyxngJW9xarDiOL+dlWAQJjgOmzj4=",
+            "rev": "v0.6.0",
+            "sha256": "sha256-3g8enPxxh2SaxiDgDwJpAfSjv/iRoBRmTnXwDtuMdFA=",
             "type": "github"
         },
-        "version": "v0.5.2"
+        "version": "v0.6.0"
     }
 }
