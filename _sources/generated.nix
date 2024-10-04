@@ -3,15 +3,15 @@
 {
   cargo-create-tauri-app = {
     pname = "cargo-create-tauri-app";
-    version = "create-tauri-app-v4.5.0";
+    version = "create-tauri-app-v4.5.1";
     src = fetchFromGitHub {
       owner = "tauri-apps";
       repo = "create-tauri-app";
-      rev = "create-tauri-app-v4.5.0";
+      rev = "create-tauri-app-v4.5.1";
       fetchSubmodules = false;
-      sha256 = "sha256-c3SugQ8jCEI7qTCuvpnCWv7Z23rRop5LBp38lwB4GEk=";
+      sha256 = "sha256-uwCSWgTBclBcSyREWf92cE3uZ4K7iA9W2oVjn7iW20g=";
     };
-    "Cargo.lock" = builtins.readFile ./cargo-create-tauri-app-create-tauri-app-v4.5.0/Cargo.lock;
+    "Cargo.lock" = builtins.readFile ./cargo-create-tauri-app-create-tauri-app-v4.5.1/Cargo.lock;
   };
   kwok = {
     pname = "kwok";
