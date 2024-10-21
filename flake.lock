@@ -26,11 +26,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1728509152,
-        "narHash": "sha256-tQo1rg3TlwgyI8eHnLvZSlQx9d/o2Rb4oF16TfaTOw0=",
+        "lastModified": 1729448365,
+        "narHash": "sha256-oquZeWTYWTr5IxfwEzgsxjtD8SSFZYLdO9DaQb70vNU=",
         "owner": "nix-community",
         "repo": "gomod2nix",
-        "rev": "d5547e530464c562324f171006fc8f639aa01c9f",
+        "rev": "5d387097aa716f35dd99d848dc26d8d5b62a104c",
         "type": "github"
       },
       "original": {
