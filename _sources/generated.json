@@ -17,6 +17,7 @@
             "repo": "create-tauri-app",
             "rev": "create-tauri-app-v4.5.9",
             "sha256": "sha256-S+3BfgddISWf+HrTT3oq0m80Fb17AVtMrxjY2chhVa8=",
+            "sparseCheckout": [],
             "type": "github"
         },
         "version": "create-tauri-app-v4.5.9"
@@ -37,6 +38,7 @@
             "repo": "kwok",
             "rev": "v0.6.1",
             "sha256": "sha256-RVyXGPT30Fz+K1VdMneYldXvzHyimuCX406DMKOtUq4=",
+            "sparseCheckout": [],
             "type": "github"
         },
         "version": "v0.6.1"
