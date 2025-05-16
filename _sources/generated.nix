@@ -15,13 +15,13 @@
   };
   kwok = {
     pname = "kwok";
-    version = "v0.6.1";
+    version = "v0.7.0";
     src = fetchFromGitHub {
       owner = "kubernetes-sigs";
       repo = "kwok";
-      rev = "v0.6.1";
+      rev = "v0.7.0";
       fetchSubmodules = false;
-      sha256 = "sha256-RVyXGPT30Fz+K1VdMneYldXvzHyimuCX406DMKOtUq4=";
+      sha256 = "sha256-gtDGkAXbNCWUVGL4+C6mOkWwrPcik6+nGEQNrjLb57U=";
     };
   };
 }
