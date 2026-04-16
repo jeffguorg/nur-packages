@@ -19,6 +19,7 @@
 }:
 let
   sources = pkgs.callPackage ./_sources/generated.nix { };
+  callPackage = pkgs.lib.callPackageWith (pkgs // { inherit sources; });
 in
 {
   # The `lib`, `modules`, and `overlay` names are special
@@ -26,11 +27,11 @@ in
   modules = import ./modules; # NixOS modules
   overlays = import ./overlays; # nixpkgs overlays
 
-  cargo-create-tauri-app = pkgs.callPackage ./pkgs/cargo-create-tauri-app {
-    inherit sources;
-  };
-
-  kwok = pkgs.callPackage ./pkgs/kwok/default.nix {
-    inherit sources;
-  };
+  create-tauri-app = callPackage ./pkgs/create-tauri-app {};
+  claude-code-bin = callPackage ./pkgs/claude-code {};
+  codex = (callPackage ./pkgs/codex {}).codex;
+  codex-bin = (callPackage ./pkgs/codex {}).codex-bin;
+  dingtalk = callPackage ./pkgs/dingtalk {};
+  kwok = pkgs.callPackage ./pkgs/kwok/default.nix {};
+  vagrant-vmware-utility = callPackage ./pkgs/vagrant-vmware-utility.nix {};
 }

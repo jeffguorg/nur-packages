@@ -9,24 +9,25 @@
       ];
     }
   )
-, buildGoApplication ? pkgs.buildGoApplication
+, buildGoModule ? pkgs.buildGoModule
 , sources ? pkgs.callPackage ../../_sources/generated.nix {}
 , ...
 }:
 let
   src = sources.kwok;
 in
-buildGoApplication {
+buildGoModule {
   inherit (src) pname version;
 
-  goPackagePath = "sigs.k8s.io/kwok";
+  vendorHash = "sha256-UNso+e/zYah0jApHZgWnQ3cUSV44HsMqPy4q4JMCyiA=";
+  #goPackagePath = "sigs.k8s.io/kwok";
 
   subPackages = [
     "cmd/kwok"
     "cmd/kwokctl"
   ];
 
-  modules = ./gomod2nix.toml;
+  #modules = ./gomod2nix.toml;
 
   src = src.src;
 }
