@@ -51,11 +51,12 @@ jobs:
       run: |
         mkdir -p artifacts
         : > "artifacts/${{ matrix.name }}.patch"
-        if git diff --quiet -- _sources/generated.json _sources/generated.nix; then
+        git add --all _sources
+        if git diff --cached --quiet -- _sources; then
           echo "No source changes for ${{ matrix.name }}"
           exit 0
         fi
-        git diff --binary -- _sources/generated.json _sources/generated.nix > "artifacts/${{ matrix.name }}.patch"
+        git diff --cached --binary --find-renames -- _sources > "artifacts/${{ matrix.name }}.patch"
     - name: Upload source patch
       if: always()
       uses: actions/upload-artifact@v4
