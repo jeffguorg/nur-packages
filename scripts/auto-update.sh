@@ -7,6 +7,7 @@ declare -a NVFETCHER_ARGS=()
 declare -A PLANNED_TASKS=()
 declare -A EXECUTED_TASKS=()
 declare -A SKIPPED_TASKS=()
+GO_VENDORHASH_TARGETS=""
 
 init_nvfetcher_args() {
   local -a env_args=()
@@ -179,6 +180,44 @@ print_execution_summary() {
   fi
 }
 
+append_go_vendorhash_target() {
+  local target="$1"
+
+  if [[ -z "$GO_VENDORHASH_TARGETS" ]]; then
+    GO_VENDORHASH_TARGETS=":${target}:"
+    return 0
+  fi
+
+  if [[ "$GO_VENDORHASH_TARGETS" != *":${target}:"* ]]; then
+    GO_VENDORHASH_TARGETS="${GO_VENDORHASH_TARGETS}${target}:"
+  fi
+}
+
+run_go_vendorhash_gate() {
+  local name="$1"
+  local task="$2"
+  local filter="$3"
+  local status
+
+  run_nvfetcher_change_gate "$name" "$task" "$filter" '.src'
+  status="$?"
+
+  case "$status" in
+    0)
+      append_go_vendorhash_target "$task"
+      ;;
+    1)
+      echo "$name unchanged; go vendor hash update not needed from this task"
+      ;;
+  esac
+}
+
+write_github_outputs() {
+  if [[ -n "${GITHUB_OUTPUT:-}" ]]; then
+    echo "go_vendorhash_targets=${GO_VENDORHASH_TARGETS}" >> "$GITHUB_OUTPUT"
+  fi
+}
+
 main() {
   init_nvfetcher_args "$@"
   load_all_tasks
@@ -203,11 +242,12 @@ main() {
     esac
   fi
 
-  run_nvfetcher_filter "kwok" "kwok" '^(kwok)$'
-  run_nvfetcher_filter "vagrant-vmware-utility" "vagrant-vmware-utility" '^(vagrant-vmware-utility)$'
+  run_go_vendorhash_gate "kwok" "kwok" '^(kwok)$'
+  run_go_vendorhash_gate "vagrant-vmware-utility" "vagrant-vmware-utility" '^(vagrant-vmware-utility)$'
 
   warn_unplanned_tasks
   print_execution_summary
+  write_github_outputs
 }
 
 main "$@"

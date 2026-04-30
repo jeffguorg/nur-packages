@@ -20,12 +20,16 @@ jobs:
           experimental-features = nix-command flakes
           access-tokens = github.com=${{ secrets.GITHUB_TOKEN }}
     - name: Update source groups
+      id: update_sources
       run: |
         bash ./scripts/auto-update.sh
     - name: Update nix flake lock
       run: nix flake update
     - name: Update Go vendor hashes
-      run: ./update-go-vendorHash.sh
+      if: steps.update_sources.outputs.go_vendorhash_targets != ''
+      env:
+        GO_VENDORHASH_TARGETS: ${{ steps.update_sources.outputs.go_vendorhash_targets }}
+      run: ./scripts/update-go-vendorHash.sh
     - name: Commit back to repository
       uses: stefanzweifel/git-auto-commit-action@v7
       with:
