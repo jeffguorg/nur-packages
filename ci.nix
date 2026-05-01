@@ -31,7 +31,9 @@ let
   shouldRecurseForDerivations = p: isAttrs p && p.recurseForDerivations or false;
 
   excludedNames = [
-    "vagrant-vmware-utility"
+    "codex" # too long to build on Github actions
+    "dingtalk" # directly build from deb is faster in China
+    "vagrant-vmware-utility" # relies on VMWare Workstation, which is closed-source
   ];
   nameValuePair = n: v: { name = n; value = v; };
 
