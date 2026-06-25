@@ -19,6 +19,8 @@ jobs:
         extra_nix_config: |
           experimental-features = nix-command flakes
           access-tokens = github.com=${{ secrets.GITHUB_TOKEN }}
+    - name: Install extra tools
+      run: sudo apt-get update && sudo apt-get install -y ripgrep jq
     - name: Update source groups
       id: update_sources
       run: |
