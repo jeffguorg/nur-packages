@@ -30,6 +30,8 @@ jobs:
       env:
         GO_VENDORHASH_TARGETS: ${{ steps.update_sources.outputs.go_vendorhash_targets }}
       run: ./scripts/update-go-vendorHash.sh
+    - name: Update Caddy plugins
+      run: ./scripts/update-caddy-plugins.sh
     - name: Commit back to repository
       uses: stefanzweifel/git-auto-commit-action@v7
       with:
