@@ -6,26 +6,6 @@
   dockerTools,
 }:
 {
-  agent-run = {
-    pname = "agent-run";
-    version = "e21c767f183529784f513da40c12253d5fc6c14c";
-    src = fetchgit {
-      url = "https://git.jeffthecoder.xyz/public/agent-run.git";
-      rev = "e21c767f183529784f513da40c12253d5fc6c14c";
-      fetchSubmodules = false;
-      deepClone = false;
-      leaveDotGit = false;
-      sparseCheckout = [ ];
-      sha256 = "sha256-4tsN5p/RUOubRkLrnGEXhoQe6XThsXQLdK5amA3FrYs=";
-    };
-    cargoLock."Cargo.lock" = {
-      lockFile = ./. + "/sha256-4tsN5p_RUOubRkLrnGEXhoQe6XThsXQLdK5amA3FrYs=/Cargo.lock";
-      outputHashes = {
-        
-      };
-    };
-    date = "2026-06-13";
-  };
   claude-code-bin-amd64-darwin = {
     pname = "claude-code-bin-amd64-darwin";
     version = "2.1.195";
