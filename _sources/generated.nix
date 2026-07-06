@@ -178,6 +178,14 @@
       sha256 = "sha256-SEKPcpWGmBWQDDQYZ7u9J5sOsXI2QofdeLshzt+0me8=";
     };
   };
+  kimi-code = {
+    pname = "kimi-code";
+    version = "0.20.0";
+    src = fetchurl {
+      url = "https://registry.npmjs.org/@moonshot-ai/kimi-code/-/kimi-code-0.20.0.tgz";
+      sha256 = "sha256-Rqnhjf+C0Ivsf1IQztW15tN2AnlpSo7lDWzpat64vwg=";
+    };
+  };
   kwok = {
     pname = "kwok";
     version = "v0.8.0";

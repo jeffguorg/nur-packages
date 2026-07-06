@@ -294,6 +294,21 @@
         },
         "version": "8.1.0.6021101"
     },
+    "kimi-code": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "kimi-code",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-Rqnhjf+C0Ivsf1IQztW15tN2AnlpSo7lDWzpat64vwg=",
+            "type": "url",
+            "url": "https://registry.npmjs.org/@moonshot-ai/kimi-code/-/kimi-code-0.20.0.tgz"
+        },
+        "version": "0.20.0"
+    },
     "kwok": {
         "cargoLock": null,
         "date": null,
