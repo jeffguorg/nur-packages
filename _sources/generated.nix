@@ -178,6 +178,38 @@
       sha256 = "sha256-SEKPcpWGmBWQDDQYZ7u9J5sOsXI2QofdeLshzt+0me8=";
     };
   };
+  kagent-bin-amd64-darwin = {
+    pname = "kagent-bin-amd64-darwin";
+    version = "v0.9.11";
+    src = fetchurl {
+      url = "https://github.com/kagent-dev/kagent/releases/download/v0.9.11/kagent-darwin-amd64";
+      sha256 = "sha256-R4Bt9az9EPiAvBLdtB9q05dimsQpERjLrZQvIRFbGr4=";
+    };
+  };
+  kagent-bin-amd64-linux = {
+    pname = "kagent-bin-amd64-linux";
+    version = "v0.9.11";
+    src = fetchurl {
+      url = "https://github.com/kagent-dev/kagent/releases/download/v0.9.11/kagent-linux-amd64";
+      sha256 = "sha256-b6+zQNsHkcOlbUOpMlck8uOEDBA+tNbFdxf0qFdKIoI=";
+    };
+  };
+  kagent-bin-arm64-darwin = {
+    pname = "kagent-bin-arm64-darwin";
+    version = "v0.9.11";
+    src = fetchurl {
+      url = "https://github.com/kagent-dev/kagent/releases/download/v0.9.11/kagent-darwin-arm64";
+      sha256 = "sha256-GeD5jtDgmiqZVjptembDekBecATdZlzXDGaHnPhesj4=";
+    };
+  };
+  kagent-bin-arm64-linux = {
+    pname = "kagent-bin-arm64-linux";
+    version = "v0.9.11";
+    src = fetchurl {
+      url = "https://github.com/kagent-dev/kagent/releases/download/v0.9.11/kagent-linux-arm64";
+      sha256 = "sha256-JohcQqylNiy0sH7GxjURNIXZBjq0Yv/h+mE+E+MN5L8=";
+    };
+  };
   kimi-code = {
     pname = "kimi-code";
     version = "0.20.0";

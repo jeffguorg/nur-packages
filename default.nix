@@ -36,6 +36,7 @@ in
   dingtalk = callPackage ./pkgs/dingtalk {};
   kwok = callPackage ./pkgs/kwok/default.nix {};
   kimi-code = callPackage ./pkgs/kimi-code {};
+  kagent-bin = callPackage ./pkgs/kagent {};
   vagrant-vmware-utility = callPackage ./pkgs/vagrant-vmware-utility.nix {};
 
   caddy-with-plugins = callPackage ./pkgs/caddy-with-plugins {};
