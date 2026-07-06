@@ -132,34 +132,34 @@
   };
   cursor-cli-bin-amd64-darwin = {
     pname = "cursor-cli-bin-amd64-darwin";
-    version = "2026.05.09-0afadcc";
+    version = "2026.07.01-41b2de7";
     src = fetchurl {
-      url = "https://downloads.cursor.com/lab/2026.05.09-0afadcc/darwin/x64/agent-cli-package.tar.gz";
-      sha256 = "sha256-9MB+tFW+ZyvqRau/XVCjh1zms9kmyJzlzqDeMJ7Utos=";
+      url = "https://downloads.cursor.com/lab/2026.07.01-41b2de7/darwin/x64/agent-cli-package.tar.gz";
+      sha256 = "sha256-T3fzfWMLYsxzi9B1qAjYoHoAPcYYal330uqexz96cCc=";
     };
   };
   cursor-cli-bin-amd64-linux = {
     pname = "cursor-cli-bin-amd64-linux";
-    version = "2026.05.09-0afadcc";
+    version = "2026.07.01-41b2de7";
     src = fetchurl {
-      url = "https://downloads.cursor.com/lab/2026.05.09-0afadcc/linux/x64/agent-cli-package.tar.gz";
-      sha256 = "sha256-IN0HzbHi5rrvi7fgjKcM5tl1T4TJ8lYlYtQC52NE9Xw=";
+      url = "https://downloads.cursor.com/lab/2026.07.01-41b2de7/linux/x64/agent-cli-package.tar.gz";
+      sha256 = "sha256-ww358eUYvWJuxYqXUo5ZeLzqbiNyGTqH2w04uFfcwZM=";
     };
   };
   cursor-cli-bin-arm64-darwin = {
     pname = "cursor-cli-bin-arm64-darwin";
-    version = "2026.05.09-0afadcc";
+    version = "2026.07.01-41b2de7";
     src = fetchurl {
-      url = "https://downloads.cursor.com/lab/2026.05.09-0afadcc/darwin/arm64/agent-cli-package.tar.gz";
-      sha256 = "sha256-htzK+PAkiH7L1tQjr7yK0Pk+8kAXkSSG7tPImYMi0oY=";
+      url = "https://downloads.cursor.com/lab/2026.07.01-41b2de7/darwin/arm64/agent-cli-package.tar.gz";
+      sha256 = "sha256-SMvykcLijYG3n6DcvxirUL9Kx3ctDpqwlI7L1fWikVg=";
     };
   };
   cursor-cli-bin-arm64-linux = {
     pname = "cursor-cli-bin-arm64-linux";
-    version = "2026.05.09-0afadcc";
+    version = "2026.07.01-41b2de7";
     src = fetchurl {
-      url = "https://downloads.cursor.com/lab/2026.05.09-0afadcc/linux/arm64/agent-cli-package.tar.gz";
-      sha256 = "sha256-xoTyqP7Nyq+dt2OyRR5mb3B8FQw7lPZuvBb0BcVW+4c=";
+      url = "https://downloads.cursor.com/lab/2026.07.01-41b2de7/linux/arm64/agent-cli-package.tar.gz";
+      sha256 = "sha256-VVZqv+h6nSg0bVDH3HHPzw3GE132GYtGYeTV3Wh5bRE=";
     };
   };
   dingtalk-bin-amd64 = {
@@ -212,10 +212,10 @@
   };
   kimi-code = {
     pname = "kimi-code";
-    version = "0.20.0";
+    version = "0.22.3";
     src = fetchurl {
-      url = "https://registry.npmjs.org/@moonshot-ai/kimi-code/-/kimi-code-0.20.0.tgz";
-      sha256 = "sha256-Rqnhjf+C0Ivsf1IQztW15tN2AnlpSo7lDWzpat64vwg=";
+      url = "https://registry.npmjs.org/@moonshot-ai/kimi-code/-/kimi-code-0.22.3.tgz";
+      sha256 = "sha256-1vvRfAzar1Fp2bzeTvqzb9r55yosmb3sqsx7Sv8TKVM=";
     };
   };
   kwok = {
