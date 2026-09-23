@@ -3,9 +3,11 @@
 #
 # pi-agent is a buildNpmPackage whose lockfile derives from the official
 # pi-coding-agent-install-package-lock.json attached to each GitHub release.
-# That lockfile ships with integrity:null on the @earendil-works/* packages,
-# which prefetch-npm-deps rejects, so the script fills integrity in from
-# registry metadata before hashing.
+# That lockfile is the single upstream-sourced artifact: pkgs/pi-agent/default.nix
+# derives its wrapper manifest from the lockfile root entry, so dependency
+# versions are never hand-written. The lockfile ships with integrity:null on
+# the @earendil-works/* packages, which prefetch-npm-deps rejects, so the
+# script fills integrity in from registry metadata before hashing.
 #
 # Triggered by .github/workflows/auto-update.yml when scripts/auto-update.sh
 # reports pi-agent in NPM_DEPS_TARGETS. Also runnable locally from repo root.
